@@ -1,6 +1,13 @@
 import { selectCartCount, useCartStore } from '../../store/cart-store';
 import { selectWishlistCount, useWishlistStore } from '../../store/wishlist-store';
-import { BagIcon, ChevronDownIcon, HeartIcon, MenuIcon, SearchIcon, UserIcon } from '../ui/icons';
+import {
+    BasketIcon,
+    ChevronDownIcon,
+    HeartIcon,
+    MenuIcon,
+    SearchIcon,
+    UserIcon,
+} from '../ui/icons';
 import { PLACEHOLDER_TITLE } from '../ui/StaticLink';
 import { Container } from './Container';
 import { Logo } from './Logo';
@@ -76,7 +83,7 @@ export function Header() {
               onClick={openCart}
               className={iconButton}
             >
-              <BagIcon className="h-6 w-6" />
+              <BasketIcon className="size-7" />
               <CountBadge count={itemCount} testId="cart-badge" />
             </button>
 

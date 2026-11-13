@@ -1,12 +1,12 @@
 import { Description, Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react';
-import { CartIcon, CloseIcon } from '../../../components/ui/icons';
+import { BasketIcon, CloseIcon } from '../../../components/ui/icons';
 import type { LastAdd } from '../../../store/cart-store';
 import {
-  selectCartCurrency,
-  selectCartIsOpen,
-  selectCartItems,
-  selectCartSubtotal,
-  useCartStore,
+    selectCartCurrency,
+    selectCartIsOpen,
+    selectCartItems,
+    selectCartSubtotal,
+    useCartStore,
 } from '../../../store/cart-store';
 import type { CartItem } from '../../../types/cart';
 import { cn } from '../../../utils/cn';
@@ -84,7 +84,7 @@ export function CartDrawer() {
               className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center"
               data-testid="cart-empty"
             >
-              <CartIcon className="h-12 w-12 text-gray-300" />
+              <BasketIcon className="size-12 text-gray-300" />
               <p className="text-base font-semibold">Your cart is empty</p>
               <p className="text-sm text-gray-500">Add products to see them here.</p>
               <button
